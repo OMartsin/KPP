@@ -39,9 +39,8 @@ public class BigIntegerFraction implements Fraction {
         }
     }
 
-    public void divide(BigInteger num){
-        numerator = this.numerator.divide(num);
-        denominator = this.denominator.divide(num);
+    public BigIntegerFraction divide(BigInteger num){
+        return new BigIntegerFraction(this.numerator.divide(num),this.denominator.divide(num));
     }
 
     @Override

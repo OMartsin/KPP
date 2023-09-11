@@ -34,9 +34,8 @@ public class IntFraction implements Fraction {
         }
     }
 
-    public void divide(int num){
-        this.numerator /= num;
-        this.denominator /= num;
+    public IntFraction divide(int num){
+        return new IntFraction(numerator/num,denominator/num);
     }
 
     @Override

@@ -13,8 +13,8 @@ public class BigIntegerSeriesSumCalculator implements IHarmonicSeriesSumCalculat
         for (int i=1;i<=count;++i){
             fraction = new BigIntegerFraction(BigInteger.ONE,BigInteger.valueOf(i));
             result = result.plus(fraction);
-            BigInteger gcd = GreatestCommonDivisor.gcd(result.getNumerator(), result.getDenominator());
-            result.divide(gcd);
+            BigInteger gcd = result.getNumerator().gcd(result.getDenominator());
+            result = result.divide(gcd);
         }
         return result;
     }

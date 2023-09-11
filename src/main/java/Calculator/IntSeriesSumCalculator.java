@@ -11,9 +11,8 @@ public class IntSeriesSumCalculator implements IHarmonicSeriesSumCalculator {
         for (int i=1;i<=count;++i){
             fraction = new IntFraction(1,i);
             result = result.plus(fraction);
-            System.out.println(result + "\tітерація " + i);
             int gcd = GreatestCommonDivisor.gcd(result.getNumerator(), result.getDenominator());
-            result.divide(gcd);
+            result = result.divide(gcd);
         }
         return result;
     }
