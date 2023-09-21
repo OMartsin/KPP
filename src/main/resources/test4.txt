@@ -1,0 +1,6 @@
+    John sent an email to johndoe@example.com yesterday.
+    The weather in San Francisco is usually sunny in the summer.
+    Please contact support via email at support@company.com for assistance.
+    The @ symbol is often used in programming for various purposes.
+    She mentioned her Twitter handle, @user123, during the conversation.
+    We'll meet at the park at 2 PM for a game of soccer.
