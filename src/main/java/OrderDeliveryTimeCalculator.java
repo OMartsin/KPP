@@ -7,6 +7,8 @@ import java.time.temporal.ChronoUnit;
 
 public class OrderDeliveryTimeCalculator {
     public static int TIME_DIFFERENCE_HOURS_FOR_SWITCHING_TO_NEXT_DAY = 5;
+    public static int EXPRESS_DELIVERY_DISTANCE = 1000; // in km
+    public static int REGULAR_DELIVERY_DISTANCE = 500; // in km
     public static LocalDate calculateDeliveryDate(Order order) {
         OnlineShop shop = order.shop();
         City deliveryCity = order.cityOfDelivery();
@@ -18,9 +20,9 @@ public class OrderDeliveryTimeCalculator {
         while (distance > 0){
             if(isWorkingDay(currDay, holidaysChecker, shop)){
                 if (order.isExpress()) {
-                    distance -= 1000;
+                    distance -= EXPRESS_DELIVERY_DISTANCE;
                 } else {
-                    distance -= 500;
+                    distance -= REGULAR_DELIVERY_DISTANCE;
                 }
             }
             currDay = currDay.plusDays(1);
