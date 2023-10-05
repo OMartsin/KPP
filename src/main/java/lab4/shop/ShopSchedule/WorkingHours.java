@@ -1,4 +1,4 @@
-package Shop.ShopSchedule;
+package lab4.shop.ShopSchedule;
 
 import java.time.LocalTime;
 

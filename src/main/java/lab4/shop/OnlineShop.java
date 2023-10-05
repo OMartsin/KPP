@@ -1,6 +1,6 @@
-package Shop;
-import Shop.ShopSchedule.ShopSchedule;
-import City.City;
+package lab4.shop;
+import lab4.shop.ShopSchedule.ShopSchedule;
+import lab4.city.City;
 
 public class OnlineShop {
     private final String name;

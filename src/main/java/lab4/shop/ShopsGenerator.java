@@ -1,10 +1,14 @@
-import City.City;
-import Shop.OnlineShop;
-import Shop.ShopSchedule.ShopSchedule;
+package lab4.shop;
+
+import lab4.CityTimeZoneMapper;
+import lab4.city.City;
+import lab4.shop.ShopSchedule.ShopSchedule;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
 
 public class ShopsGenerator {
     private static final String[] SHOP_GENERIC_NAMES = {"SuperMart", "MegaStore", "QuickShop", "GroceryGalore", "FreshFoods"};

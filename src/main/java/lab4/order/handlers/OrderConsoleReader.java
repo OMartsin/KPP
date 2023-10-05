@@ -1,10 +1,14 @@
-import Shop.OnlineShop;
+package lab4.order.handlers;
+
+import lab4.CityTimeZoneMapper;
+import lab4.order.Order;
+import lab4.shop.OnlineShop;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Scanner;
 
-public class OrderConsoleRider {
+public class OrderConsoleReader {
     public static Order getOrder(List<OnlineShop> shops) {
         Scanner scanner = new Scanner(System.in);
         OnlineShop selectedShop = selectShop(shops, scanner);

@@ -1,4 +1,6 @@
-import City.City;
+package lab4;
+
+import lab4.city.City;
 import java.time.ZoneId;
 import java.util.HashMap;
 import java.util.Map;

@@ -1,5 +1,7 @@
-import City.City;
-import Shop.OnlineShop;
+package lab4.order;
+
+import lab4.city.City;
+import lab4.shop.OnlineShop;
 
 import java.time.LocalDate;
 
@@ -7,7 +9,7 @@ public record Order (City cityOfDelivery, OnlineShop shop, boolean isExpress, Lo
 
     @Override
     public String toString() {
-        return "Order: " + "\n" +
+        return "lab4.order.Order: " + "\n" +
                 "City of delivery: " + cityOfDelivery + "\n" +
                 "Shop: " + shop + "\n" +
                 "Is express: " + isExpress + "\n" +

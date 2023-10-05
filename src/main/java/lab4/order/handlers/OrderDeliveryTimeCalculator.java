@@ -1,6 +1,10 @@
-import City.City;
-import City.CityDistanceCalculator;
-import Shop.OnlineShop;
+package lab4.order.handlers;
+
+import lab4.city.City;
+import lab4.city.CityDistanceCalculator;
+import lab4.order.Order;
+import lab4.shop.OnlineShop;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
