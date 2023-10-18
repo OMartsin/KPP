@@ -1,4 +1,4 @@
-package lab4.shop.ShopSchedule;
+package lab4.shop.shedule;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;

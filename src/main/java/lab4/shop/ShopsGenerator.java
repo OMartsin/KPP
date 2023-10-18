@@ -2,7 +2,7 @@ package lab4.shop;
 
 import lab4.CityTimeZoneMapper;
 import lab4.city.City;
-import lab4.shop.ShopSchedule.ShopSchedule;
+import lab4.shop.shedule.ShopSchedule;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;

@@ -1,5 +1,5 @@
 package lab4.shop;
-import lab4.shop.ShopSchedule.ShopSchedule;
+import lab4.shop.shedule.ShopSchedule;
 import lab4.city.City;
 
 public class OnlineShop {
