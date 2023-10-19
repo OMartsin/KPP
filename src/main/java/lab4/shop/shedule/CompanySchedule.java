@@ -5,10 +5,10 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.EnumMap;
 
-public class ShopSchedule {
+public class CompanySchedule {
     private EnumMap<DayOfWeek, WorkingHours> schedule;
 
-    public ShopSchedule() {
+    public CompanySchedule() {
         schedule = new EnumMap<>(DayOfWeek.class);
     }
 

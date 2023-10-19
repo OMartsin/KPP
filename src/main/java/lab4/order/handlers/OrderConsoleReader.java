@@ -1,6 +1,7 @@
 package lab4.order.handlers;
 
 import lab4.CityTimeZoneMapper;
+import lab4.deliverycompany.DeliveryCompany;
 import lab4.order.Order;
 import lab4.shop.OnlineShop;
 
@@ -9,13 +10,15 @@ import java.util.List;
 import java.util.Scanner;
 
 public class OrderConsoleReader {
-    public static Order getOrder(List<OnlineShop> shops) {
+    public static Order getOrder(List<OnlineShop> shops, List<DeliveryCompany> deliveryCompanies) {
         Scanner scanner = new Scanner(System.in);
         OnlineShop selectedShop = selectShop(shops, scanner);
         String userCity = selectCity(scanner);
         LocalDate orderDate = selectOrderDate(scanner);
         boolean isExpress = selectDeliveryType(scanner);
-        return new Order(CityTimeZoneMapper.getCityByCityName(userCity), selectedShop, isExpress, orderDate);
+        DeliveryCompany deliveryCompany = selectDeliveryCompany(deliveryCompanies, scanner);
+        return new Order(CityTimeZoneMapper.getCityByCityName(userCity), selectedShop,
+                isExpress, deliveryCompany, orderDate);
     }
 
     private static OnlineShop selectShop(List<OnlineShop> shops, Scanner scanner) {
@@ -75,6 +78,22 @@ public class OrderConsoleReader {
                 return false;
             } else {
                 System.out.println("Invalid input. Please enter 'yes' or 'no'.");
+            }
+        }
+    }
+
+    private static DeliveryCompany selectDeliveryCompany(List<DeliveryCompany> deliveryCompanies,
+                                                         Scanner scanner){
+        while (true){
+            System.out.println("Available delivery companies:");
+            deliveryCompanies.forEach(delComp ->
+                    System.out.println(deliveryCompanies.indexOf(delComp) + ": " + delComp.toString()));
+            System.out.print("Enter the number of the company for the order: ");
+            int index = scanner.nextInt();
+            if (index >= 0 && index < deliveryCompanies.size()) {
+                return deliveryCompanies.get(index);
+            } else {
+                System.out.println("Invalid company number. Please try again.");
             }
         }
     }

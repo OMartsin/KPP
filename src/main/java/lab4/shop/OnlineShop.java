@@ -1,15 +1,15 @@
 package lab4.shop;
-import lab4.shop.shedule.ShopSchedule;
+import lab4.shop.shedule.CompanySchedule;
 import lab4.city.City;
 
 public class OnlineShop {
     private final String name;
-    private final ShopSchedule shopSchedule;
+    private final CompanySchedule companySchedule;
     private final City city;
 
-    public OnlineShop(String name, ShopSchedule shopSchedule, City city) {
+    public OnlineShop(String name, CompanySchedule companySchedule, City city) {
         this.name = name;
-        this.shopSchedule = shopSchedule;
+        this.companySchedule = companySchedule;
         this.city = city;
     }
 
@@ -17,8 +17,8 @@ public class OnlineShop {
         return name;
     }
 
-    public ShopSchedule getShopSchedule() {
-        return shopSchedule;
+    public CompanySchedule getShopSchedule() {
+        return companySchedule;
     }
 
     public City getCity() {
@@ -27,6 +27,6 @@ public class OnlineShop {
 
     @Override
     public String toString() {
-        return name + " " + city.toString() + " " + shopSchedule.toString();
+        return name + " " + city.toString() + " " + companySchedule.toString();
     }
 }
