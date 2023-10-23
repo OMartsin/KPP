@@ -1,0 +1,10 @@
+Margherita;200;10;Tomato, Mozzarella, Basil;false
+Pepperoni;250;12;Tomato, Mozzarella, Pepperoni;true
+Hawaiian;280;14;Tomato, Mozzarella, Ham, Pineapple;false
+Veggie;300;13;Tomato, Mozzarella, Bell Peppers, Olives, Mushrooms;false
+Cheese;220;9;Tomato, Mozzarella;false
+Meat Lovers;320;15;Tomato, Mozzarella, Sausage, Pepperoni, Bacon;true
+BBQ Chicken;280;14;BBQ Sauce, Mozzarella, Chicken, Red Onion;false
+Supreme;310;16;Tomato, Mozzarella, Sausage, Pepperoni, Bell Peppers, Olives, Mushrooms;true
+Margarita;210;11;Tomato, Mozzarella, Basil;false
+White Pizza;240;12;Mozzarella, Ricotta, Garlic, Spinach;false
