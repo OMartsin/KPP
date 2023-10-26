@@ -22,17 +22,18 @@ public class TextManipulatorTest {
         });
     }
     @Test
-    public void TestRemoveWorldsByLengthWithConsonantBigWorld(){
-        String text = "Hello World, this is a test";
-        String result = textManipulator.removeWorldsByLengthWithConsonant(text, 5);
-        assert result.equals("Hello this is a test");
+    public void TestRemoveWorldsByLengthWithConsonantMaxLen10(){
+        String text = "Hello World, this is another a test";
+        String result = textManipulator.removeWorldsByLengthWithConsonant(text, 10);
+        System.out.println(result);
+        assert result.equals("Hello World, this is another a test");
     }
 
     @Test
     public void TestRemoveWorldsByLengthWithConsonantAllBigWorlds(){
-        String text = "Hello World, this test";
-        String result = textManipulator.removeWorldsByLengthWithConsonant(text, 1);
-        assert result.equals("");
+        String text = "Hello World, this is another test";
+        String result = textManipulator.removeWorldsByLengthWithConsonant(text, 2);
+        assert result.equals("is another");
     }
 
     @Test
@@ -59,7 +60,7 @@ public class TextManipulatorTest {
 
     @Test
     public void TestGetCapitalWordGroupsWithoutCapitalWord(){
-        String text = "hello";
+        String text = "hello hello hello sS";
         var result = textManipulator.getCapitalWordGroups(text);
         assert result.size() == 0 ;
     }

@@ -11,7 +11,11 @@ public class TextManipulator {
         String[] words = text.split(" ");
         StringBuilder sb = new StringBuilder();
         for (String word : words) {
-            if (word.length() <= maxWordLength || word.matches("[aeiouAEIOU]+")) {
+            if (word.matches("\\b[aeiouAEIOU]\\w*")) {
+                sb.append(word).append(" ");
+                continue;
+            }
+            if(word.length() <= maxWordLength){
                 sb.append(word).append(" ");
             }
         }
