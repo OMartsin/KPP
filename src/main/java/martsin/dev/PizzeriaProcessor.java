@@ -46,7 +46,7 @@ public class PizzeriaProcessor {
         return pizzeria.getDinnerList().stream().max(Comparator.comparing(Dinner::getPrice)).get();
     }
 
-    public Map<Pizza,List<Dinner>> getGroupByPizzaMap(){
+    public Map<Pizza,List<Dinner>> getGroupByPizzaMap() {
         return pizzeria.getDinnerList().stream().flatMap(dinner -> dinner.order().stream().
                 map(pizza -> Map.entry(pizza, dinner))).collect(
                         java.util.stream.Collectors.groupingBy(Map.Entry::getKey,
@@ -63,5 +63,9 @@ public class PizzeriaProcessor {
 
     public List<Dinner> getDinnersWithSpicyPizza(){
         return pizzeria.getDinnerList().stream().filter(Dinner::isSpicy).toList();
+    }
+
+    public void serializeCollection(){
+        PizzeriaSerializer.serializeCollection(pizzeria.getMenu());
     }
 }

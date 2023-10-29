@@ -1,8 +1,10 @@
 package martsin.dev.pizza;
 
+import java.io.Serializable;
 import java.util.List;
 
-public record Pizza (String name, int weight, int price, List<String> toppings, boolean isSpicy) {
+public record Pizza (String name, int weight, int price, List<String> toppings, boolean isSpicy)
+implements Serializable {
     public Pizza {
         if (weight < 0) {
             throw new IllegalArgumentException("Weight cannot be negative");

@@ -2,11 +2,13 @@ package martsin.dev.dinner;
 
 import martsin.dev.pizza.Pizza;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public record Dinner(String name, List<Pizza> order, String address, LocalDateTime deliveryDateTime){
+public record Dinner(String name, List<Pizza> order, String address, LocalDateTime deliveryDateTime)
+        implements Serializable {
     public Dinner {
         if(order == null || order.isEmpty()) {
             throw new IllegalArgumentException("Order cannot be null or empty");

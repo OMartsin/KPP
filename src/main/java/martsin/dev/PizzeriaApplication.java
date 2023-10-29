@@ -20,6 +20,7 @@ public class PizzeriaApplication {
             System.out.println("7. View Expired Dinners");
             System.out.println("8. View Dinners with Pizza");
             System.out.println("9. View Dinners with Spicy Pizza");
+            System.out.println("11. Serialize pizzas collection");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
 
@@ -56,6 +57,7 @@ public class PizzeriaApplication {
                     PizzeriaConsolePrinter.printDinnersByPizzaName(processor.getDinnersByPizzaName(pizzaName), pizzaName);
                 }
                 case 9 -> PizzeriaConsolePrinter.printDinnersWithSpicyPizza(processor.getDinnersWithSpicyPizza());
+                case 11 -> processor.serializeCollection();
                 case 0 -> {
                     System.out.println("Exiting the Pizzeria Menu. Goodbye!");
                     System.exit(0);
